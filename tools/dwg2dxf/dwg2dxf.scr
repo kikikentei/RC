@@ -1,0 +1,4 @@
+(setvar "FILEDIA" 0)
+(setvar "CMDECHO" 0)
+(setq dxfpath (strcat (getvar "DWGPREFIX") (substr (getvar "DWGNAME") 1 (- (strlen (getvar "DWGNAME")) 4)) ".dxf"))
+(command "_.DXFOUT" dxfpath "_V" (getenv "DWG2DXF_VER") "16")
